@@ -158,7 +158,7 @@ namespace GLOO {
 			for (int j = 0; j < state_.positions.size(); j++) {
 				positions->push_back(state_.positions.at(j));
 			}
-			lines_->UpdatePositions(std::move(positions));
+			lines_->UpdatePositions(std::move(positions));	
 			time_ += step_size_;
 		}
 	}
