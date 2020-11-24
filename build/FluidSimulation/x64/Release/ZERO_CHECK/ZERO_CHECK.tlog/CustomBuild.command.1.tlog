@@ -1,0 +1,10 @@
+^C:\USERS\ANDRE\DESKTOP\6.837\FLUIDSIMULATION\BUILD\FLUIDSIMULATION\CMAKEFILES\67AE2A48FB551D2460FC3A9EBFCFC443\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/6.837/FluidSimulation -BC:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/6.837.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

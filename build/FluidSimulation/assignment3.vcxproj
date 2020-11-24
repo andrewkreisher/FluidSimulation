@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D90E6CA3-5928-397F-B9A9-C458C23564FA}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>assignment3</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">assignment3.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">assignment3</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">assignment3.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">assignment3</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">assignment3.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">assignment3</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">assignment3.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">assignment3</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;IMGUI_IMPL_OPENGL_LOADER_GLAD;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;IMGUI_IMPL_OPENGL_LOADER_GLAD;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>external\src\glfw-3.3.2\src\Debug\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/Debug/assignment3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/Debug/assignment3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;IMGUI_IMPL_OPENGL_LOADER_GLAD;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;IMGUI_IMPL_OPENGL_LOADER_GLAD;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>external\src\glfw-3.3.2\src\Release\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/Release/assignment3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/Release/assignment3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;IMGUI_IMPL_OPENGL_LOADER_GLAD;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;IMGUI_IMPL_OPENGL_LOADER_GLAD;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>external\src\glfw-3.3.2\src\MinSizeRel\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/MinSizeRel/assignment3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/MinSizeRel/assignment3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;IMGUI_IMPL_OPENGL_LOADER_GLAD;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;IMGUI_IMPL_OPENGL_LOADER_GLAD;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\stb;C:\Users\andre\Desktop\6.837\FluidSimulation;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3;C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glfw-3.3.2\include;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>external\src\glfw-3.3.2\src\RelWithDebInfo\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/RelWithDebInfo/assignment3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/RelWithDebInfo/assignment3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\andre\Desktop\6.837\FluidSimulation\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/andre/Desktop/6.837/FluidSimulation/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/6.837/FluidSimulation -BC:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation --check-stamp-file C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeCCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeCXXCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeRCCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeSystem.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8\cmake\glm\glmConfig-version.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8\cmake\glm\glmConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/andre/Desktop/6.837/FluidSimulation/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/6.837/FluidSimulation -BC:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation --check-stamp-file C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeCCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeCXXCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeRCCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeSystem.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8\cmake\glm\glmConfig-version.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8\cmake\glm\glmConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/andre/Desktop/6.837/FluidSimulation/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/6.837/FluidSimulation -BC:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation --check-stamp-file C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeCCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeCXXCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeRCCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeSystem.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8\cmake\glm\glmConfig-version.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8\cmake\glm\glmConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/andre/Desktop/6.837/FluidSimulation/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/6.837/FluidSimulation -BC:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation --check-stamp-file C:/Users/andre/Desktop/6.837/FluidSimulation/build/FluidSimulation/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeCCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeCXXCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeRCCompiler.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\3.18.2\CMakeSystem.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8\cmake\glm\glmConfig-version.cmake;C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glm-0.9.9.8\cmake\glm\glmConfig.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Application.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Image.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\InputManager.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\MeshLoader.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Renderer.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Scene.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\SceneNode.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Transform.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\VertexObject.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\cameras\ArcBallCameraNode.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\cameras\BasicCameraNode.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\CameraComponent.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\RenderingComponent.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\ShadingComponent.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\debug\AxisNode.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\debug\PrimitiveFactory.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\BindGuard.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\BindableBuffer.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\VertexArray.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\parsers\ObjParser.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\PhongShader.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\ShaderProgram.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\SimpleShader.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\utils.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\src\glad.c" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\imgui.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\imgui_demo.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\imgui_draw.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples\imgui_impl_glfw.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ClothNode.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\PendulumNode.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\PendulumSystem.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SimulationApp.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SingleNode.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SingleParticleSystem.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\main.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common\helpers.cpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ClothNode.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ForwardEulerIntegrator.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\IntegratorBase.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\IntegratorFactory.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\IntegratorType.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ParticleState.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ParticleSystemBase.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\PendulumNode.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\PendulumSystem.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\RK4Integrator.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SimulationApp.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SingleNode.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SingleParticleSystem.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\TrapezoidalIntegrator.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Application.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Image.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\InputManager.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Material.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\MeshData.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\MeshLoader.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Renderer.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Scene.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\SceneNode.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Transform.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\VertexObject.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\alias_types.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\cameras\ArcBallCameraNode.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\cameras\BasicCameraNode.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\CameraComponent.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\ComponentBase.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\ComponentType.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\LightComponent.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\MaterialComponent.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\RenderingComponent.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\ShadingComponent.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\debug\AxisNode.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\debug\PrimitiveFactory.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\external.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\BindGuard.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\BindableBuffer.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\IBindable.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\VertexArray.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\VertexBuffer.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\lights\AmbientLight.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\lights\DirectionalLight.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\lights\LightBase.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\lights\PointLight.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\parsers\ObjParser.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\PhongShader.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\ShaderProgram.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\SimpleShader.hpp" />
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\ZERO_CHECK.vcxproj">
+      <Project>{ED701ABC-D473-3C31-86F3-2421C4D66412}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\external\src\glfw-3.3.2\src\glfw.vcxproj">
+      <Project>{E262ED38-6059-346C-8BE7-0675D2021519}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

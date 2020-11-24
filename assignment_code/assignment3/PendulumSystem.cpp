@@ -18,7 +18,14 @@ namespace GLOO{
 				float m = masses_[i];
 				glm::vec3 x_i = state.positions[i];
 				glm::vec3 vel = state.velocities[i];
-				glm::vec3 gravity = { 0.0,  -9.81 * m , 0 };
+				glm::vec3 gravity; 
+				if (x_i[1] <= 0.5) {
+					gravity = { 0,0.1 * m,0 };
+				}
+				else {
+					gravity = { 0.0,  -0.1 * m , 0 };
+				}
+				
 				glm::vec3 viscous_drag = -vk_ * vel; 
 				glm::vec3 spring_force = { 0.f, 0.f, 0.f };
 				std::vector<int> springs = springs_.at(i); 
@@ -29,7 +36,9 @@ namespace GLOO{
 					glm::vec3 s_ij = -sk_ * (d_mag - sr_) * d / d_mag;
 					spring_force += s_ij;
 				}
-				glm::vec3 A = (gravity + viscous_drag + spring_force) / m;
+				glm::vec3 A = (gravity + viscous_drag + spring_force) / m;;
+				
+				
 				deriv.positions.push_back(vel); 
 				deriv.velocities.push_back(A); 
 				//std::cout << glm::to_string(viscous_drag) << std::endl;

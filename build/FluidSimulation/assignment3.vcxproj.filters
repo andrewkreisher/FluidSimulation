@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Application.cpp">
+      <Filter>gloo</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Image.cpp">
+      <Filter>gloo</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\InputManager.cpp">
+      <Filter>gloo</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\MeshLoader.cpp">
+      <Filter>gloo</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Renderer.cpp">
+      <Filter>gloo</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Scene.cpp">
+      <Filter>gloo</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\SceneNode.cpp">
+      <Filter>gloo</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Transform.cpp">
+      <Filter>gloo</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\VertexObject.cpp">
+      <Filter>gloo</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\cameras\ArcBallCameraNode.cpp">
+      <Filter>gloo\cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\cameras\BasicCameraNode.cpp">
+      <Filter>gloo\cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\CameraComponent.cpp">
+      <Filter>gloo\components</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\RenderingComponent.cpp">
+      <Filter>gloo\components</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\ShadingComponent.cpp">
+      <Filter>gloo\components</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\debug\AxisNode.cpp">
+      <Filter>gloo\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\debug\PrimitiveFactory.cpp">
+      <Filter>gloo\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\BindGuard.cpp">
+      <Filter>gloo\gl_wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\BindableBuffer.cpp">
+      <Filter>gloo\gl_wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\VertexArray.cpp">
+      <Filter>gloo\gl_wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\parsers\ObjParser.cpp">
+      <Filter>gloo\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\PhongShader.cpp">
+      <Filter>gloo\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\ShaderProgram.cpp">
+      <Filter>gloo\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\SimpleShader.cpp">
+      <Filter>gloo\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\utils.cpp">
+      <Filter>gloo</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\glad\src\glad.c">
+      <Filter>external\src\glad\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\imgui.cpp">
+      <Filter>external\src\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\imgui_demo.cpp">
+      <Filter>external\src\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\imgui_draw.cpp">
+      <Filter>external\src\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\imgui_widgets.cpp">
+      <Filter>external\src\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples\imgui_impl_glfw.cpp">
+      <Filter>external\src\imgui\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\external\src\imgui\examples\imgui_impl_opengl3.cpp">
+      <Filter>external\src\imgui\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ClothNode.cpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\PendulumNode.cpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\PendulumSystem.cpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SimulationApp.cpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SingleNode.cpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SingleParticleSystem.cpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\main.cpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common\helpers.cpp">
+      <Filter>assignment_code\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ClothNode.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ForwardEulerIntegrator.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\IntegratorBase.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\IntegratorFactory.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\IntegratorType.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ParticleState.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ParticleSystemBase.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\PendulumNode.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\PendulumSystem.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\RK4Integrator.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SimulationApp.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SingleNode.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SingleParticleSystem.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\TrapezoidalIntegrator.hpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Application.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Image.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\InputManager.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Material.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\MeshData.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\MeshLoader.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Renderer.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Scene.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\SceneNode.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Transform.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\VertexObject.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\alias_types.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\cameras\ArcBallCameraNode.hpp">
+      <Filter>gloo\cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\cameras\BasicCameraNode.hpp">
+      <Filter>gloo\cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\CameraComponent.hpp">
+      <Filter>gloo\components</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\ComponentBase.hpp">
+      <Filter>gloo\components</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\ComponentType.hpp">
+      <Filter>gloo\components</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\LightComponent.hpp">
+      <Filter>gloo\components</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\MaterialComponent.hpp">
+      <Filter>gloo\components</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\RenderingComponent.hpp">
+      <Filter>gloo\components</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\components\ShadingComponent.hpp">
+      <Filter>gloo\components</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\debug\AxisNode.hpp">
+      <Filter>gloo\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\debug\PrimitiveFactory.hpp">
+      <Filter>gloo\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\external.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\BindGuard.hpp">
+      <Filter>gloo\gl_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\BindableBuffer.hpp">
+      <Filter>gloo\gl_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\IBindable.hpp">
+      <Filter>gloo\gl_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\VertexArray.hpp">
+      <Filter>gloo\gl_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\gl_wrapper\VertexBuffer.hpp">
+      <Filter>gloo\gl_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\lights\AmbientLight.hpp">
+      <Filter>gloo\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\lights\DirectionalLight.hpp">
+      <Filter>gloo\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\lights\LightBase.hpp">
+      <Filter>gloo\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\lights\PointLight.hpp">
+      <Filter>gloo\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\parsers\ObjParser.hpp">
+      <Filter>gloo\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\PhongShader.hpp">
+      <Filter>gloo\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\ShaderProgram.hpp">
+      <Filter>gloo\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\shaders\SimpleShader.hpp">
+      <Filter>gloo\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\utils.hpp">
+      <Filter>gloo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\andre\Desktop\6.837\FluidSimulation\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="assignment_code">
+      <UniqueIdentifier>{0E18E1A8-90D1-3D84-B67B-428C69CD9544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assignment_code\assignment3">
+      <UniqueIdentifier>{17B686E3-1C02-38AA-AD00-D4192C06A586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assignment_code\common">
+      <UniqueIdentifier>{5C7B1B34-BCB6-32C0-BC01-ACB1D67BB33A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{6901934E-7D32-3600-B03A-5705F7F29575}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\src">
+      <UniqueIdentifier>{1A80409F-6A99-33A4-9B0B-1FF46B42CAD4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\src\glad">
+      <UniqueIdentifier>{BBCEEC0B-2F32-364B-8278-9E932488DEF7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\src\glad\src">
+      <UniqueIdentifier>{B59FB87C-197A-372A-B17A-E9CD018D9EFA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\src\imgui">
+      <UniqueIdentifier>{185172B9-7C73-39D6-918D-2874B3FA9C62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\src\imgui\examples">
+      <UniqueIdentifier>{86268C9E-8A51-3CCD-9881-CE5624F88E6B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gloo">
+      <UniqueIdentifier>{1A45A6E1-D4FA-3587-88B0-849AE584FA4D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gloo\cameras">
+      <UniqueIdentifier>{FE84B518-0C3C-3664-9D0B-40346CF7C960}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gloo\components">
+      <UniqueIdentifier>{85FFC67E-3F83-3F0E-AF0D-E31EC16C7C84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gloo\debug">
+      <UniqueIdentifier>{988EB758-7CBC-319F-88F6-9957727B52EE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gloo\gl_wrapper">
+      <UniqueIdentifier>{DCF4024A-9343-3145-BCFB-8FA7BFB2AC8C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gloo\lights">
+      <UniqueIdentifier>{9993BE52-10D4-339B-BA66-30D3C81C4AA6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gloo\parsers">
+      <UniqueIdentifier>{70D35618-C573-384D-A44B-F5291BC55ED9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gloo\shaders">
+      <UniqueIdentifier>{C0B9DF15-C0C5-3E01-9BA3-875816FA5D0C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

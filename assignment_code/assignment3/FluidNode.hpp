@@ -15,9 +15,9 @@ namespace GLOO {
 	class FluidNode : public SceneNode {
 	public:
 		FluidNode(IntegratorType type, float step_size);
-		//void Update(double delta_time) override;
+		void Update(double delta_time) override;
 		void Setup();
-		int IndexOf(int i, int j);
+		int IndexOf(int i, int j, int z);
 
 	private:
 		ParticleState state_;

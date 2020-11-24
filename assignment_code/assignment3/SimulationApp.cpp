@@ -17,6 +17,7 @@
 #include "PendulumNode.hpp"
 #include "IntegratorFactory.hpp"
 #include "ClothNode.hpp"
+#include "FluidNode.hpp"
 
 namespace GLOO {
 SimulationApp::SimulationApp(const std::string& app_name,
@@ -56,8 +57,9 @@ void SimulationApp::SetupScene() {
   point_light_node->CreateComponent<LightComponent>(point_light);
   point_light_node->GetTransform().SetPosition(glm::vec3(0.0f, 2.0f, 4.f));
   root.AddChild(std::move(point_light_node));
-  root.AddChild(make_unique<SingleNode>(integrator_type_,integration_step_));
-  root.AddChild(make_unique<PendulumNode>(integrator_type_, integration_step_));
-  root.AddChild(make_unique<ClothNode>(integrator_type_, integration_step_));
+  //root.AddChild(make_unique<SingleNode>(integrator_type_,integration_step_));
+  //root.AddChild(make_unique<PendulumNode>(integrator_type_, integration_step_));
+  //root.AddChild(make_unique<ClothNode>(integrator_type_, integration_step_));
+  root.AddChild(make_unique<FluidNode>(integrator_type_, integration_step_));
 }
 }  // namespace GLOO
