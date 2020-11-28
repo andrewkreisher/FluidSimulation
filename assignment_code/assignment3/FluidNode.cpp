@@ -1,4 +1,5 @@
 #include "FluidNode.hpp"
+#include "FluidSystem.hpp"
 #include "PendulumNode.hpp"
 #include "gloo/SceneNode.hpp"
 #include "SingleParticleSystem.hpp"
@@ -20,10 +21,10 @@
 namespace GLOO {
 
 	FluidNode::FluidNode(IntegratorType type, float step_size) {
-		integrator_ = IntegratorFactory::CreateIntegrator<PendulumSystem, ParticleState>(type);
+		integrator_ = IntegratorFactory::CreateIntegrator<FluidSystem, ParticleState>(type);
 		sphere_mesh_ = PrimitiveFactory::CreateSphere(0.05f, 25, 25);
 		shader_ = std::make_shared<PhongShader>();
-		system_ = make_unique<PendulumSystem>();
+		system_ = make_unique<FluidSystem>();
 		time_ = 0.0;
 		step_size_ = step_size;
 		dimension_ = 4;
@@ -59,29 +60,6 @@ namespace GLOO {
 			}
 		}
 
-
-		for (int i = 0; i < dimension_; i++) {
-			for (int j = 0; j < dimension_; j++) {
-				for (int z = 0; z < dimension_; z++) {
-					if (i != dimension_ - 1) {
-						system_->AddSpring(IndexOf(i, j, z), IndexOf(i + 1, j, z));
-						//indices_->push_back(IndexOf(i, j, z));
-						//indices_->push_back(IndexOf(i + 1, j, z));
-					}
-					if (j != dimension_ - 1) {
-						system_->AddSpring(IndexOf(i, j, z), IndexOf(i, j + 1, z));
-						//indices_->push_back(IndexOf(i, j, z));
-						//indices_->push_back(IndexOf(i, j + 1, z));
-					}
-					if (z != dimension_ - 1) {
-						system_->AddSpring(IndexOf(i, j, z), IndexOf(i, j, z+1));
-						//indices_->push_back(IndexOf(i, j, z));
-						//indices_->push_back(IndexOf(i, j, z+1));
-					}
-				}
-				
-			}
-		}
 
 		init_state_ = state_;
 

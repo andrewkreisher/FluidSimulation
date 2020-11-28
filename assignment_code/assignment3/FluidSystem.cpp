@@ -12,6 +12,19 @@ namespace GLOO {
 	ParticleState FluidSystem::ComputeTimeDerivative(const ParticleState& state,
 		float time) const {
 		ParticleState deriv;
+		for (int i = 0; i < masses_.size(); i++) {
+
+				float m = masses_[i];
+				glm::vec3 x_i = state.positions[i];
+				glm::vec3 vel = state.velocities[i];
+				glm::vec3 gravity = { 0, -9.81 * m, 0 };
+				glm::vec3 A = gravity;
+
+
+				deriv.positions.push_back(vel);
+				deriv.velocities.push_back(A);
+		}
+		
 		return deriv;
 	}
 

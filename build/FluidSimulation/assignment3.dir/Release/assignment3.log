@@ -1,5 +1,5 @@
-﻿  FluidSystem.cpp
-..\..\assignment_code\assignment3\FluidSystem.cpp(38,15): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
-..\..\assignment_code\assignment3\FluidSystem.cpp(43,15): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
-..\..\assignment_code\assignment3\FluidSystem.cpp(48,14): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
+﻿  FluidNode.cpp
+C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(51,30): warning C4305:  'argument': truncation from 'double' to 'float'
+C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(90,15): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(91,71): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
   assignment3.vcxproj -> C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\Release\assignment3.exe

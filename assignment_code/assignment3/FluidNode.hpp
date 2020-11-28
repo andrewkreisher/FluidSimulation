@@ -8,6 +8,7 @@
 #include "gloo/components/ShadingComponent.hpp"
 #include "gloo/components/RenderingComponent.hpp"
 #include "PendulumSystem.hpp"
+#include "FluidSystem.hpp"
 #include "IntegratorType.hpp"
 
 
@@ -21,11 +22,11 @@ namespace GLOO {
 
 	private:
 		ParticleState state_;
-		std::unique_ptr<IntegratorBase<PendulumSystem, ParticleState>> integrator_;
+		std::unique_ptr<IntegratorBase<FluidSystem, ParticleState>> integrator_;
 		std::shared_ptr<VertexObject> sphere_mesh_;
 		std::shared_ptr<VertexObject> lines_;
 		std::shared_ptr<ShaderProgram> shader_;
-		std::unique_ptr<PendulumSystem> system_;
+		std::unique_ptr<FluidSystem> system_;
 		std::unique_ptr<IndexArray> indices_;
 		ParticleState init_state_;
 		double time_;
