@@ -60,7 +60,7 @@ namespace GLOO {
 			}
 		}
 
-
+		
 		init_state_ = state_;
 
 		/*Material& mat = GetChild(IndexOf(0,0,3)).GetComponentPtr<MaterialComponent>()->GetMaterial();
@@ -88,6 +88,7 @@ namespace GLOO {
 
 		for (float i = 0; i <= int(delta_time / step_size_); i++) {
 			float step = step_size_ < delta_time ? step_size_ : delta_time;
+			
 			ParticleState new_state = integrator_->Integrate(*system_, state_, time_, step);
 			state_ = new_state;
 			for (int i = 0; i < state_.positions.size(); i++) {

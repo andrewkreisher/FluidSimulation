@@ -17,9 +17,9 @@ namespace GLOO {
 			float time) const;
 		void AddParticle(float mass);
 		void ComputeDensities(const ParticleState& state);
-		float W(glm::vec3 r, float h); 
-		glm::vec3 grad_W(glm::vec3 r, float h);
-		float laplace_W(glm::vec3 r, float h);
+		float W(glm::vec3 r, float h) const ;
+		glm::vec3 grad_W(glm::vec3 r, float h) const;
+		float laplace_W(glm::vec3 r, float h) const;
 
 	private:
 		std::vector<float> masses_;
