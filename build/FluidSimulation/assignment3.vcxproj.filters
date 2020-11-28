@@ -121,6 +121,9 @@
     <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common\helpers.cpp">
       <Filter>assignment_code\common</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\assignment_code\assignment3\FluidSystem.cpp">
+      <Filter>assignment_code\assignment3</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ClothNode.hpp">
@@ -281,6 +284,9 @@
     </ClInclude>
     <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\utils.hpp">
       <Filter>gloo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\assignment_code\assignment3\FluidSystem.hpp">
+      <Filter>assignment_code\assignment3</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
