@@ -30,6 +30,8 @@ namespace GLOO {
 		float h_;
 		float pk_;
 		float mu_;
+		float rest_density_;
+		float restitution_;
 	};
 }
 #endif

@@ -38,7 +38,7 @@ namespace GLOO {
 
 	void FluidNode::Setup() {
 		for (int i = 0; i < dimension_; i++) {
-			for (int j = 0; j < dimension_; j++) {
+			for (int j = 0; j < 6; j++) {
 				for (int z = 0; z < dimension_; z++) {
 					auto node = make_unique<SceneNode>();
 					node->CreateComponent<ShadingComponent>(shader_);
@@ -46,7 +46,10 @@ namespace GLOO {
 					auto material = std::make_shared<Material>(Material::GetDefault());
 					node->CreateComponent<MaterialComponent>(material);
 					//glm::vec3 pos = { 1 + 0.15 * j,  0,1 - 0.15 * i };
-					glm::vec3 pos = { 0.15 * z, 0.15 * j , 0.15 * i };
+					float sep_x = 0.1;
+					float sep_y = 0.15;
+					float sep_z = 0.1;
+					glm::vec3 pos = { sep_x * z, 0.5 + sep_y * j , sep_z * i };
 					node->GetTransform().SetPosition(pos);
 					system_->AddParticle(0.1);
 					//positions->push_back(pos);
@@ -87,11 +90,17 @@ namespace GLOO {
 		}
 
 		for (float i = 0; i <= int(delta_time / step_size_); i++) {
-			float step = step_size_ < delta_time ? step_size_ : delta_time;
+			float step = step_size_ < delta_time ? step_size_ : delta_time;	
 			
 			ParticleState new_state = integrator_->Integrate(*system_, state_, time_, step);
 			state_ = new_state;
 			for (int i = 0; i < state_.positions.size(); i++) {
+				if (state_.positions[i][1] < 0.05) {
+					glm::vec3 bound_norm = { 0,1,0 };
+					glm::vec3 vel_i = state_.velocities[i];
+					vel_i = vel_i - (1 + 0.4f) * (glm::dot(vel_i, bound_norm)) * bound_norm;
+					state_.velocities[i] = vel_i;
+				}
 				GetChild(i).GetTransform().SetPosition(state_.positions[i]);
 			}
 			//auto positions = make_unique<PositionArray>();

@@ -7,15 +7,19 @@
 namespace GLOO {
 
 	FluidSystem::FluidSystem() {
-		h_ = 1;
-		mu_ = 0.5;
+		h_ = .2;
+		mu_ = 0.05;
+		rest_density_ = 1000;
+		pk_ = 0.2;
+		restitution_ = 0.5;
 	}
 
 	ParticleState FluidSystem::ComputeTimeDerivative(const ParticleState& state,
 		float time) const {
 		ParticleState deriv;
 		std::vector<float> densities; 
-		//compute densities 
+		std::vector<float> pressures;
+		//compute densities && pressures
 
 		for (int i = 0; i < masses_.size(); i++) {
 			float density_i = 0;
@@ -25,6 +29,7 @@ namespace GLOO {
 				float dens = masses_[j] * W(r_i - r_j, h_);
 				density_i += dens;
 			}
+			pressures.push_back(pk_ * (density_i - rest_density_));
 			densities.push_back(density_i);
 		}
 
@@ -38,18 +43,31 @@ namespace GLOO {
 				glm::vec3 pressure = glm::vec3(0.0); 
 				glm::vec3 viscosity = glm::vec3(0.0);
 
+				//floor bound
+				/*if (r_i[1] < 0) {
+					glm::vec3 bound_norm = { 0,1,0 };
+					float d = -r_i[1];
+					vel_i = vel_i - 2 * (glm::dot(vel_i, bound_norm)) * bound_norm;
+				}*/
+
 				for (int j = 0; j < masses_.size(); j++) {
-					
-					glm::vec3 r_j = state.positions[j]; 
-					glm::vec3 vel_j = state.velocities[j];
-					float m_j = masses_[j];
-					 
-					viscosity += m_j * ((vel_j - vel_i) / densities[j]) * grad_W(r_i - r_j, h_);
+					if (i != j) {
+						glm::vec3 r_j = state.positions[j];
+						glm::vec3 vel_j = state.velocities[j];
+						float m_j = masses_[j];
+						//std::cout << glm::to_string(vel_j) << std::endl;
+						//std::cout << glm::to_string(grad_W(r_i - r_j, h_)) << std::endl;
+						//viscosity += m_j * ((vel_j - vel_i) / densities[j]) * laplace_W(r_i - r_j, h_);
 
+						pressure += m_j * (pressures[i] / pow(densities[i], 2) + pressures[j] / pow(densities[j], 2)) * grad_W(r_i - r_j, h_);
+
+						viscosity += m_j * ((vel_j - vel_i) / densities[j]) * laplace_W(r_i - r_j, h_);
+					}
 				}
-
-				//glm::vec3 A = gravity + (mu_ / densities[i]) * viscosity;
-				glm::vec3 A = gravity;
+				//std::cout << glm::to_string(viscosity) << std::endl;
+				glm::vec3 A = gravity + pressure + (mu_ / densities[i]) * viscosity;
+				//std::cout << glm::to_string(A) << std::endl;
+				//glm::vec3 A = gravity;
 				deriv.positions.push_back(vel_i);
 				deriv.velocities.push_back(A);
 		}
