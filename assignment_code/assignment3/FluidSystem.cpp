@@ -6,13 +6,32 @@
 namespace GLOO {
 
 	FluidSystem::FluidSystem() {
-		
+		h_ = 1;
 	}
 
 	ParticleState FluidSystem::ComputeTimeDerivative(const ParticleState& state,
 		float time) const {
 		ParticleState deriv;
 		return deriv;
+	}
+
+
+	void FluidSystem::AddParticle(float mass) {
+		masses_.push_back(mass);
+	}
+
+	void FluidSystem::ComputeDensities(const ParticleState& state) {
+		densities_.clear();
+		for (int i = 0; i < masses_.size(); i++) {
+			float density_i = 0;
+			glm::vec3 r_i = state.positions.at(i);
+			for (int j = 0; j < masses_.size(); j++) {
+				glm::vec3 r_j = state.positions.at(j);
+				float dens = masses_[j] * W(r_i - r_j, h_);
+				density_i += dens;
+			}
+			densities_.push_back(density_i);
+		}
 	}
 
 	float FluidSystem::W(glm::vec3 r, float h) {

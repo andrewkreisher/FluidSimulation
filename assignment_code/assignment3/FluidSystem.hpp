@@ -15,16 +15,19 @@ namespace GLOO {
 		FluidSystem();
 		ParticleState ComputeTimeDerivative(const ParticleState& state,
 			float time) const;
-		std::vector<float> computeDensities();
+		void AddParticle(float mass);
+		void ComputeDensities(const ParticleState& state);
 		float W(glm::vec3 r, float h); 
 		glm::vec3 grad_W(glm::vec3 r, float h);
 		float laplace_W(glm::vec3 r, float h);
 
 	private:
 		std::vector<float> masses_;
+		std::vector<float> densities_;
 		std::vector<bool> fixed_;
 		std::unordered_map<int, std::vector<int>> springs_;
 		ParticleState state_;
+		float h_;
 		float pk_;
 		float mu_;
 	};
