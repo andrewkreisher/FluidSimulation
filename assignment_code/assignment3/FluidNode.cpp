@@ -46,9 +46,9 @@ namespace GLOO {
 					auto material = std::make_shared<Material>(Material::GetDefault());
 					node->CreateComponent<MaterialComponent>(material);
 					//glm::vec3 pos = { 1 + 0.15 * j,  0,1 - 0.15 * i };
-					float sep_x = 0.1;
-					float sep_y = 0.15;
-					float sep_z = 0.1;
+					float sep_x = 0.08;
+					float sep_y = 0.12;
+					float sep_z = 0.08;
 					glm::vec3 pos = { sep_x * z, 0.5 + sep_y * j , sep_z * i };
 					node->GetTransform().SetPosition(pos);
 					system_->AddParticle(0.1);

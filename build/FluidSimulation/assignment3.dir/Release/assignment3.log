@@ -1,7 +1,7 @@
 ﻿  FluidNode.cpp
-C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(49,23): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(49,24): warning C4305:  'initializing': truncation from 'double' to 'float'
 C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(50,24): warning C4305:  'initializing': truncation from 'double' to 'float'
-C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(51,23): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(51,24): warning C4305:  'initializing': truncation from 'double' to 'float'
 C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(54,30): warning C4305:  'argument': truncation from 'double' to 'float'
 C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(93,15): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(95,71): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
