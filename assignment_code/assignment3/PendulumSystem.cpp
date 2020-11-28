@@ -7,7 +7,7 @@ namespace GLOO{
 		g_ = 9.81;
 		vk_ = 0.2; 
 		sk_ = 32; 
-		sr_ = 0.2;		
+		sr_ = 0.1;		
 	}
 
 	ParticleState PendulumSystem::ComputeTimeDerivative(const ParticleState& state,
@@ -19,8 +19,8 @@ namespace GLOO{
 				glm::vec3 x_i = state.positions[i];
 				glm::vec3 vel = state.velocities[i];
 				glm::vec3 gravity; 
-				if (x_i[1] <= 0.5) {
-					gravity = { 0,0.1 * m,0 };
+				if (x_i[1] <= 0.1) {
+					gravity = { 0,-0.5 * m,0 };
 				}
 				else {
 					gravity = { 0.0,  -0.1 * m , 0 };
@@ -37,7 +37,11 @@ namespace GLOO{
 					spring_force += s_ij;
 				}
 				glm::vec3 A = (gravity + viscous_drag + spring_force) / m;;
-				
+				if (x_i[1] <= 0 || x_i[0] <= -0.1 || x_i[0] >= 1 || x_i[2] <= -0.1 || x_i[2] >= 1) {
+					vel = -vel / 100.f;
+					A = -A / 100.f;
+				}
+
 				
 				deriv.positions.push_back(vel); 
 				deriv.velocities.push_back(A); 

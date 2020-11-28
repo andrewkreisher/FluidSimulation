@@ -26,7 +26,7 @@ namespace GLOO {
 		system_ = make_unique<PendulumSystem>();
 		time_ = 0.0;
 		step_size_ = step_size;
-		dimension_ = 8;
+		dimension_ = 4;
 		lines_ = std::make_shared<VertexObject>();
 		Setup();
 	};
