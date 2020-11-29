@@ -32,6 +32,7 @@ namespace GLOO {
 		double time_;
 		float step_size_;
 		int dimension_;
+		int floor_w_;
 
 	};
 } //namespace gloo

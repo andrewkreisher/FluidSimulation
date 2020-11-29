@@ -29,6 +29,7 @@ namespace GLOO {
 		step_size_ = step_size;
 		dimension_ = 7;
 		lines_ = std::make_shared<VertexObject>();
+		floor_w_ = 2;
 		Setup();
 	};
 
@@ -63,16 +64,17 @@ namespace GLOO {
 			}
 		}
 
+
+		//draw floor
 		auto lines_ = std::make_shared<VertexObject>();
 		auto positions = make_unique<PositionArray>();
 		auto indices = make_unique<IndexArray>();
-
-		float w = 3;
+		
 		float z = -0.1;
-		positions->push_back({ -w, z, -w });
-		positions->push_back({ -w, z, w });
-		positions->push_back({ w, z, -w });
-		positions->push_back({ w, z, w });
+		positions->push_back({ -floor_w_, z, -floor_w_ });
+		positions->push_back({ -floor_w_, z, floor_w_ });
+		positions->push_back({ floor_w_, z, -floor_w_ });
+		positions->push_back({ floor_w_, z, floor_w_ });
 		
 		indices->push_back(0); 
 		indices->push_back(1);
@@ -80,8 +82,6 @@ namespace GLOO {
 		indices->push_back(1);
 		indices->push_back(2);
 		indices->push_back(3);
-
-
 
 		lines_->UpdatePositions(std::move(positions));
 		lines_->UpdateIndices(std::move(indices));
@@ -94,7 +94,6 @@ namespace GLOO {
 		auto material = std::make_shared<Material>(color, color, color, 0);
 		line_node->CreateComponent<MaterialComponent>(material);
 		AddChild(std::move(line_node));
-
 		
 		init_state_ = state_;
 
@@ -127,12 +126,13 @@ namespace GLOO {
 			ParticleState new_state = integrator_->Integrate(*system_, state_, time_, step);
 			state_ = new_state;
 			for (int i = 0; i < state_.positions.size(); i++) {
-				if (state_.positions[i][1] < 0.00 && abs(state_.positions[i][2]) <= 3 && abs(state_.positions[i][0]) <= 3) {
-					glm::vec3 bound_norm = { 0,1,0 };
-					glm::vec3 vel_i = state_.velocities[i];
-					vel_i = vel_i - (1 + 0.4f) * (glm::dot(vel_i, bound_norm)) * bound_norm;
-					state_.velocities[i] = vel_i;
-					state_.positions[i][1] = -state_.positions[i][1];
+				if (state_.positions[i][1] < 0.00 && abs(state_.positions[i][2]) <= floor_w_ 
+					&& abs(state_.positions[i][0]) <= floor_w_) {
+						glm::vec3 bound_norm = { 0,1,0 };
+						glm::vec3 vel_i = state_.velocities[i];
+						vel_i = vel_i - (1 + 0.4f) * (glm::dot(vel_i, bound_norm)) * bound_norm;
+						state_.velocities[i] = vel_i;
+						state_.positions[i][1] = -state_.positions[i][1];
 				}
 				GetChild(i).GetTransform().SetPosition(state_.positions[i]);
 			}
