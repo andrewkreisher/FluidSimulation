@@ -113,7 +113,7 @@ namespace GLOO {
 
 
 		//draw lines
-
+		
 		lines_->UpdatePositions(std::move(positions));
 		lines_->UpdateIndices(std::move(indices_));
 		auto line_node = make_unique<SceneNode>();

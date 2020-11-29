@@ -16,18 +16,18 @@
 #include "gloo/InputManager.hpp"
 #include "gloo/shaders/SimpleShader.hpp"
 
-
+ 
 
 namespace GLOO {
 
 	FluidNode::FluidNode(IntegratorType type, float step_size) {
 		integrator_ = IntegratorFactory::CreateIntegrator<FluidSystem, ParticleState>(type);
-		sphere_mesh_ = PrimitiveFactory::CreateSphere(0.05f, 25, 25);
+		sphere_mesh_ = PrimitiveFactory::CreateSphere(0.08f, 25, 25);
 		shader_ = std::make_shared<PhongShader>();
 		system_ = make_unique<FluidSystem>();
 		time_ = 0.0;
 		step_size_ = step_size;
-		dimension_ = 4;
+		dimension_ = 7;
 		lines_ = std::make_shared<VertexObject>();
 		Setup();
 	};
@@ -46,12 +46,12 @@ namespace GLOO {
 					auto material = std::make_shared<Material>(Material::GetDefault());
 					node->CreateComponent<MaterialComponent>(material);
 					//glm::vec3 pos = { 1 + 0.15 * j,  0,1 - 0.15 * i };
-					float sep_x = 0.08;
+					float sep_x = 0.10;
 					float sep_y = 0.12;
-					float sep_z = 0.08;
+					float sep_z = 0.10;
 					glm::vec3 pos = { sep_x * z, 0.5 + sep_y * j , sep_z * i };
 					node->GetTransform().SetPosition(pos);
-					system_->AddParticle(0.1);
+					system_->AddParticle(0.2);
 					//positions->push_back(pos);
 					state_.positions.push_back(pos);
 					state_.velocities.push_back({ 0,0,0 });
@@ -62,6 +62,38 @@ namespace GLOO {
 				}
 			}
 		}
+
+		auto lines_ = std::make_shared<VertexObject>();
+		auto positions = make_unique<PositionArray>();
+		auto indices = make_unique<IndexArray>();
+
+		float w = 3;
+		float z = -0.1;
+		positions->push_back({ -w, z, -w });
+		positions->push_back({ -w, z, w });
+		positions->push_back({ w, z, -w });
+		positions->push_back({ w, z, w });
+		
+		indices->push_back(0); 
+		indices->push_back(1);
+		indices->push_back(2);
+		indices->push_back(1);
+		indices->push_back(2);
+		indices->push_back(3);
+
+
+
+		lines_->UpdatePositions(std::move(positions));
+		lines_->UpdateIndices(std::move(indices));
+		auto line_node = make_unique<SceneNode>();
+		auto shader = std::make_shared<SimpleShader>();
+		line_node->CreateComponent<ShadingComponent>(shader);
+		auto& rc = line_node->CreateComponent<RenderingComponent>(lines_);
+		rc.SetDrawMode(DrawMode::Triangles);
+		glm::vec3 color(0.2, 0.2, 0.2);
+		auto material = std::make_shared<Material>(color, color, color, 0);
+		line_node->CreateComponent<MaterialComponent>(material);
+		AddChild(std::move(line_node));
 
 		
 		init_state_ = state_;
@@ -95,11 +127,12 @@ namespace GLOO {
 			ParticleState new_state = integrator_->Integrate(*system_, state_, time_, step);
 			state_ = new_state;
 			for (int i = 0; i < state_.positions.size(); i++) {
-				if (state_.positions[i][1] < 0.05) {
+				if (state_.positions[i][1] < 0.00 && abs(state_.positions[i][2]) <= 3 && abs(state_.positions[i][0]) <= 3) {
 					glm::vec3 bound_norm = { 0,1,0 };
 					glm::vec3 vel_i = state_.velocities[i];
 					vel_i = vel_i - (1 + 0.4f) * (glm::dot(vel_i, bound_norm)) * bound_norm;
 					state_.velocities[i] = vel_i;
+					state_.positions[i][1] = -state_.positions[i][1];
 				}
 				GetChild(i).GetTransform().SetPosition(state_.positions[i]);
 			}

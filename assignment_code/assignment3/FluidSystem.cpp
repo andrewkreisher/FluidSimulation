@@ -8,9 +8,9 @@ namespace GLOO {
 
 	FluidSystem::FluidSystem() {
 		h_ = .2;
-		mu_ = 0.05;
+		mu_ = 2;
 		rest_density_ = 1000;
-		pk_ = 0.2;
+		pk_ = 2;
 		restitution_ = 0.5;
 	}
 
