@@ -56,8 +56,8 @@ namespace GLOO {
 					state_.positions.push_back(pos);
 					state_.velocities.push_back({ 0,0,0 });
 					Material& mat = node->GetComponentPtr<MaterialComponent>()->GetMaterial();
-					mat.SetAmbientColor(glm::vec3(0.0f, 0.0f, 1.0f));
-					mat.SetDiffuseColor(glm::vec3(0.0f, 0.0f, 1.0f));
+					mat.SetAmbientColor(glm::vec3(0, 0.5, 1));
+					mat.SetDiffuseColor(glm::vec3(0, 0.5, 1));
 					AddChild(std::move(node));
 				}
 			}
