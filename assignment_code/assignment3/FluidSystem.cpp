@@ -7,7 +7,8 @@
 namespace GLOO {
 
 	FluidSystem::FluidSystem() {
-		h_ = .2;
+		h_ = 0.2; 
+		//h_ = 0.5;
 		mu_ = 2;
 		rest_density_ = 1000;
 		pk_ = 2;
@@ -17,6 +18,7 @@ namespace GLOO {
 	ParticleState FluidSystem::ComputeTimeDerivative(const ParticleState& state,
 		float time) const {
 		ParticleState deriv;
+
 		std::vector<float> densities; 
 		std::vector<float> pressures;
 		//compute densities && pressures
@@ -43,31 +45,23 @@ namespace GLOO {
 				glm::vec3 pressure = glm::vec3(0.0); 
 				glm::vec3 viscosity = glm::vec3(0.0);
 
-				//floor bound
-				/*if (r_i[1] < 0) {
-					glm::vec3 bound_norm = { 0,1,0 };
-					float d = -r_i[1];
-					vel_i = vel_i - 2 * (glm::dot(vel_i, bound_norm)) * bound_norm;
-				}*/
 
 				for (int j = 0; j < masses_.size(); j++) {
 					if (i != j) {
 						glm::vec3 r_j = state.positions[j];
-						glm::vec3 vel_j = state.velocities[j];
-						float m_j = masses_[j];
-						//std::cout << glm::to_string(vel_j) << std::endl;
-						//std::cout << glm::to_string(grad_W(r_i - r_j, h_)) << std::endl;
-						//viscosity += m_j * ((vel_j - vel_i) / densities[j]) * laplace_W(r_i - r_j, h_);
+						if (true) {
+							glm::vec3 vel_j = state.velocities[j];
+							
+							float m_j = masses_[j];
 
-						pressure += m_j * (pressures[i] / pow(densities[i], 2) + pressures[j] / pow(densities[j], 2)) * grad_W(r_i - r_j, h_);
+							pressure += m_j * (pressures[i] / pow(densities[i], 2) + pressures[j] / pow(densities[j], 2)) * grad_W(r_i - r_j, h_);
 
-						viscosity += m_j * ((vel_j - vel_i) / densities[j]) * laplace_W(r_i - r_j, h_);
+							viscosity += m_j * ((vel_j - vel_i) / densities[j]) * laplace_W(r_i - r_j, h_);
+						}
 					}
 				}
-				//std::cout << glm::to_string(viscosity) << std::endl;
 				glm::vec3 A = gravity + pressure + (mu_ / densities[i]) * viscosity;
-				//std::cout << glm::to_string(A) << std::endl;
-				//glm::vec3 A = gravity;
+
 				deriv.positions.push_back(vel_i);
 				deriv.velocities.push_back(A);
 		}
@@ -108,5 +102,6 @@ namespace GLOO {
 		float left = 45.0f / (M_PI * pow(h, 6));
 		return left * (h - length(r));
 	}
+
 
 }

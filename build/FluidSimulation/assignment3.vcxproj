@@ -313,6 +313,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\assignment_code\assignment3\FluidNode2.cpp" />
+    <ClCompile Include="..\..\assignment_code\assignment3\FluidNode3.cpp" />
     <ClCompile Include="..\..\assignment_code\assignment3\FluidSystem.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Application.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\gloo\Image.cpp" />
@@ -354,6 +356,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\SingleParticleSystem.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\main.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\common\helpers.cpp" />
+    <ClInclude Include="..\..\assignment_code\assignment3\FluidNode2.hpp" />
+    <ClInclude Include="..\..\assignment_code\assignment3\FluidNode3.hpp" />
     <ClInclude Include="..\..\assignment_code\assignment3\FluidSystem.hpp" />
     <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\ClothNode.hpp" />
     <ClInclude Include="C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.hpp" />

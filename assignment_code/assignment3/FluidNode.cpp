@@ -27,7 +27,7 @@ namespace GLOO {
 		system_ = make_unique<FluidSystem>();
 		time_ = 0.0;
 		step_size_ = step_size;
-		dimension_ = 7;
+		dimension_ = 6;
 		lines_ = std::make_shared<VertexObject>();
 		floor_w_ = 2;
 		Setup();
@@ -39,7 +39,7 @@ namespace GLOO {
 
 	void FluidNode::Setup() {
 		for (int i = 0; i < dimension_; i++) {
-			for (int j = 0; j < 6; j++) {
+			for (int j = 0; j < 8; j++) {
 				for (int z = 0; z < dimension_; z++) {
 					auto node = make_unique<SceneNode>();
 					node->CreateComponent<ShadingComponent>(shader_);
@@ -64,6 +64,7 @@ namespace GLOO {
 			}
 		}
 
+		//
 
 		//draw floor
 		auto lines_ = std::make_shared<VertexObject>();

@@ -18,6 +18,8 @@
 #include "IntegratorFactory.hpp"
 #include "ClothNode.hpp"
 #include "FluidNode.hpp"
+#include "FluidNode2.hpp"
+#include "FluidNode3.hpp"
 
 namespace GLOO {
 SimulationApp::SimulationApp(const std::string& app_name,
@@ -60,6 +62,6 @@ void SimulationApp::SetupScene() {
   //root.AddChild(make_unique<SingleNode>(integrator_type_,integration_step_));
   //root.AddChild(make_unique<PendulumNode>(integrator_type_, integration_step_));
   //root.AddChild(make_unique<ClothNode>(integrator_type_, integration_step_));
-  root.AddChild(make_unique<FluidNode>(integrator_type_, integration_step_));
+  root.AddChild(make_unique<FluidNode3>(integrator_type_, integration_step_));
 }
 }  // namespace GLOO

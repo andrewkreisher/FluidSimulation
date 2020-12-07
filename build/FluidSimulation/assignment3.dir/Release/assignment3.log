@@ -1,11 +1,13 @@
-﻿  FluidNode.cpp
-C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(50,24): warning C4305:  'initializing': truncation from 'double' to 'float'
-C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(51,24): warning C4305:  'initializing': truncation from 'double' to 'float'
-C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(52,24): warning C4305:  'initializing': truncation from 'double' to 'float'
-C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(55,30): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(73,17): warning C4305:  'initializing': truncation from 'double' to 'float'
-C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(124,15): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(126,71): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+﻿  FluidNode3.cpp
+..\..\assignment_code\assignment3\FluidNode3.cpp(35,18): warning C4305:  '=': truncation from 'double' to 'float'
+..\..\assignment_code\assignment3\FluidNode3.cpp(53,23): warning C4305:  'initializing': truncation from 'double' to 'float'
+..\..\assignment_code\assignment3\FluidNode3.cpp(54,23): warning C4305:  'initializing': truncation from 'double' to 'float'
+..\..\assignment_code\assignment3\FluidNode3.cpp(55,23): warning C4305:  'initializing': truncation from 'double' to 'float'
+..\..\assignment_code\assignment3\FluidNode3.cpp(58,30): warning C4305:  'argument': truncation from 'double' to 'float'
+..\..\assignment_code\assignment3\FluidNode3.cpp(83,17): warning C4305:  'initializing': truncation from 'double' to 'float'
+..\..\assignment_code\assignment3\FluidNode3.cpp(84,18): warning C4305:  'initializing': truncation from 'double' to 'float'
+..\..\assignment_code\assignment3\FluidNode3.cpp(245,15): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
+..\..\assignment_code\assignment3\FluidNode3.cpp(247,71): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\memory(1555,71): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\memory(1555,71): warning C4244:         with
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\memory(1555,71): warning C4244:         [
@@ -21,5 +23,5 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\1
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\memory(1608): message :         [
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\memory(1608): message :             _Ty=GLOO::Material
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\memory(1608): message :         ]
-C:\Users\andre\Desktop\6.837\FluidSimulation\assignment_code\assignment3\FluidNode.cpp(94): message :  see reference to function template instantiation 'std::shared_ptr<GLOO::Material> std::make_shared<GLOO::Material,glm::vec3&,glm::vec3&,glm::vec3&,int>(glm::vec3 &,glm::vec3 &,glm::vec3 &,int &&)' being compiled
+..\..\assignment_code\assignment3\FluidNode3.cpp(227): message :  see reference to function template instantiation 'std::shared_ptr<GLOO::Material> std::make_shared<GLOO::Material,glm::vec3&,glm::vec3&,glm::vec3&,int>(glm::vec3 &,glm::vec3 &,glm::vec3 &,int &&)' being compiled
   assignment3.vcxproj -> C:\Users\andre\Desktop\6.837\FluidSimulation\build\FluidSimulation\Release\assignment3.exe
